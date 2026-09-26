@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Pytest / Testing / Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebooks Checkpoints
+.ipynb_checkpoints
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# MLOps Artifacts & Tracking (Phase 2+)
+mlruns/
+mlartifacts/
+*.db
+*.sqlite
+*.sqlite3
+
+# Models & Reports (keep directory structure via .gitkeep, ignore runtime artifacts)
+models/*
+!models/.gitkeep
+reports/*
+!reports/.gitkeep
+!reports/evidently_data_drift.html
+!reports/evidently_target_drift.html
+!reports/custom_metric.json
+!reports/monitoring_summary.json
+!reports/experiment_comparison.json
+!reports/experiment_comparison.md
+
+# Temporary / OS caches
+tmp/
+.tmp/
+.cache/

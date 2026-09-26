@@ -1,0 +1,11 @@
+{
+  "metric_name": "churn_rate_shift",
+  "formula": "abs(current_churn_rate - reference_churn_rate)",
+  "threshold": 0.05,
+  "reference_value": 0.2625,
+  "current_value": 0.4808,
+  "difference": 0.2184,
+  "passed": false,
+  "status": "FAIL (DRIFT DETECTED)",
+  "production_interpretation": "Churn rate shifted by 21.84% (from 26.25% to 48.08%). Tolerance threshold is 5.00%. Significant business drift detected! Recommended action: investigate upstream billing/contract adjustments and evaluate model performance."
+}

@@ -1,0 +1,163 @@
+{
+  "dataset_name": "Telco-Customer-Churn",
+  "reference_rows": 4930,
+  "current_rows": 2113,
+  "data_drift": {
+    "report_type": "DataDrift",
+    "total_columns_analyzed": 19,
+    "drifted_columns_count": 6,
+    "drifted_columns_ratio": 0.3158,
+    "dataset_drift_detected": true,
+    "drifted_columns": [
+      "Contract",
+      "InternetService",
+      "MonthlyCharges",
+      "PaymentMethod",
+      "TotalCharges",
+      "tenure"
+    ],
+    "column_drift_details": {
+      "tenure": {
+        "method": "Wasserstein distance (normed",
+        "score": 0.687141,
+        "threshold": 0.1,
+        "drift_detected": true
+      },
+      "MonthlyCharges": {
+        "method": "Wasserstein distance (normed",
+        "score": 1.016416,
+        "threshold": 0.1,
+        "drift_detected": true
+      },
+      "TotalCharges": {
+        "method": "Wasserstein distance (normed",
+        "score": 0.311786,
+        "threshold": 0.1,
+        "drift_detected": true
+      },
+      "gender": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.008343,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "SeniorCitizen": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.012491,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "Partner": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.001125,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "Dependents": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.000506,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "PhoneService": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.001302,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "MultipleLines": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.001414,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "InternetService": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.201075,
+        "threshold": 0.1,
+        "drift_detected": true
+      },
+      "OnlineSecurity": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.007997,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "OnlineBackup": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.005492,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "DeviceProtection": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.007278,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "TechSupport": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.008663,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "StreamingTV": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.005137,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "StreamingMovies": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.014918,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "Contract": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.293404,
+        "threshold": 0.1,
+        "drift_detected": true
+      },
+      "PaperlessBilling": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.008589,
+        "threshold": 0.1,
+        "drift_detected": false
+      },
+      "PaymentMethod": {
+        "method": "Jensen-Shannon distance",
+        "score": 0.231602,
+        "threshold": 0.1,
+        "drift_detected": true
+      }
+    }
+  },
+  "target_drift": {
+    "report_type": "TargetDrift",
+    "target_column": "Churn",
+    "target_drift_detected": true,
+    "method": "Jensen-Shannon distance",
+    "drift_score": 0.160652,
+    "threshold": 0.1,
+    "reference_distribution": {
+      "No": 0.7375,
+      "Yes": 0.2625
+    },
+    "current_distribution": {
+      "No": 0.5192,
+      "Yes": 0.4808
+    }
+  },
+  "custom_metric": {
+    "metric_name": "churn_rate_shift",
+    "formula": "abs(current_churn_rate - reference_churn_rate)",
+    "threshold": 0.05,
+    "reference_value": 0.2625,
+    "current_value": 0.4808,
+    "difference": 0.2184,
+    "passed": false,
+    "status": "FAIL (DRIFT DETECTED)",
+    "production_interpretation": "Churn rate shifted by 21.84% (from 26.25% to 48.08%). Tolerance threshold is 5.00%. Significant business drift detected! Recommended action: investigate upstream billing/contract adjustments and evaluate model performance."
+  }
+}

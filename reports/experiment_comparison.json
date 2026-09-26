@@ -1,0 +1,42 @@
+[
+  {
+    "Run ID": "bcfc93ea3cdd46288b425de05e673760",
+    "Model Name": "logistic_regression_balanced",
+    "Model Type": "LogisticRegression",
+    "Accuracy": 0.7374,
+    "Precision": 0.5034,
+    "Recall": 0.7834,
+    "F1-Score": 0.613,
+    "ROC-AUC": 0.8417
+  },
+  {
+    "Run ID": "ff3e86bedeca41b692148c9da8ec1565",
+    "Model Name": "random_forest_balanced",
+    "Model Type": "RandomForestClassifier",
+    "Accuracy": 0.7537,
+    "Precision": 0.5237,
+    "Recall": 0.7968,
+    "F1-Score": 0.632,
+    "ROC-AUC": 0.843
+  },
+  {
+    "Run ID": "79e364d6e4c24a17a3577d63eaa4e7b4",
+    "Model Name": "hist_gradient_boosting",
+    "Model Type": "HistGradientBoostingClassifier",
+    "Accuracy": 0.7509,
+    "Precision": 0.5204,
+    "Recall": 0.7861,
+    "F1-Score": 0.6262,
+    "ROC-AUC": 0.8401
+  },
+  {
+    "Run ID": "6f242eb24ab54a9dbe6929dc58caf3ab",
+    "Model Name": "random_forest_unweighted",
+    "Model Type": "RandomForestClassifier",
+    "Accuracy": 0.8013,
+    "Precision": 0.6546,
+    "Recall": 0.5321,
+    "F1-Score": 0.587,
+    "ROC-AUC": 0.837
+  }
+]
